@@ -34,9 +34,10 @@ export = int(sys.argv[2]) # 0
 crawl = crawl_miner(url)
 words = set()
 
-txt_return = extract_url(crawl)
-for txt_url in txt_return:
-    words.add(txt_url)
+if crawl:
+    txt_return = extract_url(crawl)
+    for txt_url in txt_return:
+        words.add(txt_url)
 
 if export:
     with open('key-export.txt', 'w') as f:

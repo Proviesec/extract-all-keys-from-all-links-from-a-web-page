@@ -16,7 +16,6 @@ def extract_url(text):
             key_list.add(val)
     return key_list
       
-
 def crawl_miner(url):
     try:
         r = requests.get(url, headers=headers)

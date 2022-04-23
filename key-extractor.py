@@ -29,8 +29,9 @@ def crawl_miner(url):
 url = sys.argv[1]
 if url.startswith("http") == False:
     url = "https://"+url
-export = int(sys.argv[2]) # 0
+export = int(sys.argv[2]) 
 crawl = crawl_miner(url)
+
 words = set()
 
 if crawl:
